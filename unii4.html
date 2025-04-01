@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta de Espacios Universitarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="unii4.css">
+    <style>
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .collage-item {
+            position: relative;
+            width: calc(33.333% - 10px);
+            overflow: hidden;
+        }
+        .collage-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .collage-item:hover img {
+            transform: scale(1.1);
+        }
+        .collage-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .collage-item:hover .caption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <img src="https://universidadinternacionaldeinnovacion.com/images/2024/04/09/unii4.png" alt="Logo UNII">
+        <h1 class="titulo-principal">Renta de Espacios Universitarios</h1>
+    </div>
+    <div class="container">
+        <h2>¡Descubre Nuestros Espacios Disponibles!</h2>
+        <div class="collage">
+            <div class="collage-item">
+                <img src="img/b79c6870-3a2d-48a3-a157-6a17be83ffad.png" alt="Aula 5, 4 y 3">
+                <div class="caption">Aulas 5 y 4: Equipados con mesas y sillas cómodas.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/e17841d5-e7e1-45cf-8e34-56643c8c0251.jpg" alt="Auditorio">
+                <div class="caption">Auditorio: Ideal para conferencias y eventos.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/482242913_1226444559067790_6151175219404202445_n.png" alt="Áreas verdes">
+                <div class="caption">Áreas Verdes: Perfectas para actividades al aire libre.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/69f198b6-7d30-44c3-a5eb-7d78b3505eda.png" alt="Velaria">
+                <div class="caption">Velaria: Espacio recreativo para todos.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/557b5e05-313e-4d7e-8f8d-acb7eff4c0c5.png" alt="Zona de Convivencia">
+                <div class="caption">Zona de Convivencia: Disfruta de un ambiente cómodo para la convivencia en este espacio equipado con cómodos puffs y sillones</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/015489d8-393f-4e46-adf8-15e3fdc5f4db.png" alt="Sala de Juntas (Chica)">
+                <div class="caption">Sala de Juntas (Chica): Espacio íntimo para reuniones pequeñas.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/c0b07dd0-fd11-4e79-897e-2c10ff246244.png" alt="Sala de Juntas (Grande)">
+                <div class="caption">Sala de Juntas (Grande): Ideal para reuniones corporativas.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/83c976c8-59b6-462a-9fcf-234d327c989c.png" alt="Metaverso">
+                <div class="caption">Metaverso: Espacio moderno y tecnológico.</div>
+            </div>
+            <div class="collage-item">
+                <img src="img/98d31d97-109c-422b-83cd-8564a8fcff29 (1).png" alt="Aula 3">
+                <div class="caption">Aula 3: Aprovecha un espacio versátil y cómodo que se adapta a tus necesidades, ya sea para talleres, reuniones o clases.</div>
+            </div>
+        </div>
+        <h2>Precios</h2>
+        <div class="pricing">
+            <p>$100 para eventos con más de 300 personas</p>
+            <p>$120 para eventos de 151 a 299 personas</p>
+            <p>$150 para eventos de 5 a 150 personas</p>
+        </div>
+        <h2>¿Por qué Elegir Nuestros Espacios?</h2>
+        <ul>
+            <li>Ambientes cómodos y bien equipados.</li>
+            <li>Lugar extenso y agradable.</li>
+            <li>Acceso a instalaciones modernas y áreas recreativas.</li>
+        </ul>
+        <h2>Solicita tu Cotización</h2>
+        <div class="form-container">
+            <form action="mailto:norma.lopez@unii.edu.mx" method="post" enctype="text/plain">
+                <label for="nombre">Nombre completo/Instituto/Empresa:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="number">Número de teléfono:</label>
+                <input type="text" id="number" name="number" required>
+                
+                <label for="tipo-espacio">Tipo de Espacio:</label>
+                <select id="tipo-espacio" name="tipo-espacio" multiple required>
+                    <option value="aula">Aula</option>
+                    <option value="auditorio">Auditorio</option>
+                    <option value="area-verde">Área Verde</option>
+                    <option value="velaria">Velaria</option>
+                    <option value="sala-juntas-chica">Sala de Juntas (Chica)</option>
+                    <option value="sala-juntas-grande">Sala de Juntas (Grande)</option>
+                    <option value="metaverso">Metaverso</option>
+                </select>
+                
+                <style>
+                    select[multiple] {
+                        width: 100%;
+                        height: 150px; /* Ajusta la altura según tus necesidades */
+                        border: 1px solid #b6e7c5;
+                        border-radius: 4px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        font-size: 16px;
+                        background-color: #ffffff;
+                    }
+                
+                    label {
+                        display: block;
+                        margin-top: 10px;
+                        font-weight: bold;
+                    }
+                </style>
+                <label for="fecha">Fecha del Evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="horario">Horario (De minutos a minutos):</label>
+                <input type="text" id="horario" name="horario" placeholder="Ej: 10:00 a.m a 12:00 p.m" required>
+
+                <label for="duracion">Duración de la Ocupación (días/semanas):</label>
+                <input type="text" id="duracion" name="duracion" placeholder="Ej: 2 días o 1 semana" required>
+                
+                <label for="materiales">Recursos que se requerirán:</label>
+                <div id="materiales" class="checkbox-group">
+                    <div>
+                        <label for="estacionamiento">Estacionamiento</label>
+                        <input type="checkbox" id="estacionamiento" name="materiales" value="estacionamiento">
+                        <label for="laptops">Laptops</label>
+                        <input type="checkbox" id="laptops" name="materiales" value="laptops">
+                        <label for="mesas">Mesas</label>
+                        <input type="checkbox" id="mesas" name="materiales" value="mesas">
+                    </div>
+                    <div>
+                        <label for="microfonos">Micrófonos</label>
+                        <input type="checkbox" id="microfonos" name="materiales" value="microfonos">
+                        <label for="oculus-vr">Oculus VR</label>
+                        <input type="checkbox" id="oculus-vr" name="materiales" value="oculus-vr">
+                        <label for="pantallas">Pantallas</label>
+                        <input type="checkbox" id="pantallas" name="materiales" value="pantallas">
+                    </div>
+                    <div>
+                        <label for="proyectores">Proyectores</label>
+                        <input type="checkbox" id="proyectores" name="materiales" value="proyectores">
+                        <label for="puffs">Puffs</label>
+                        <input type="checkbox" id="puffs" name="materiales" value="puffs">
+                        <label for="sillas">Sillas</label>
+                        <input type="checkbox" id="sillas" name="materiales" value="sillas">
+                    </div>
+                </div>
+                
+                <style>
+                    .checkbox-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .checkbox-group div {
+                        width: 33%;
+                        box-sizing: border-box;
+                        padding: 10px;
+                    }
+                    .checkbox-group label {
+                        display: block;
+                    }
+                </style>
+
+                <label for="herramientas">Materiales y Herramientas que serán aportados:</label>
+                <textarea id="herramientas" name="herramientas" rows="4" placeholder="Especifica aquí los materiales que seran aportados"></textarea>
+
+                <label for="personas">Cantidad de Personas:</label>
+                <input type="number" id="personas" name="personas" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <button type="submit">Enviar Cotización</button>
+            </form>
+        </div>
+        <h2>Contáctanos para Más Información</h2>
+        <p class="contact">Teléfono: 449 110 3586</p>
+        <p class="contact">Correo electrónico: norma.lopez@unii.edu.mx</p>
+        <p class="contact">Dirección: Bolevar a Zacatecas Norte km. 5 Col. Trojes de Alonso Ags, Aguascalientes</p>
+        <a href="mailto:norma.lopez@unii.edu.mx" class="button">¡Reserva Ahora!</a>
+        <div class="footer">
+            <p>¡No pierdas la oportunidad de reservar tu espacio hoy mismo!</p>
+        </div>
+    </div>
+</body>
+</html>  
